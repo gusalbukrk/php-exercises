@@ -6,8 +6,10 @@ function getDayOfWeek($date) {
   return $date;
 }
 
-echo "Date (year-month-day, e.g. 2022-09-21): ";
-$input = readline();
+function f4() {
+  echo "Date (year-month-day, e.g. 2022-09-21): ";
+  $input = readline();
 
-echo "Day of week: " . getDayOfWeek($input) . "\n";
+  echo "Day of week: " . getDayOfWeek($input) . "\n";
+}
 ?>

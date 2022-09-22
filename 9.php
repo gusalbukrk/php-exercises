@@ -1,8 +1,8 @@
 <?php
 
-echo "\$n (positive integer): ";
-$n = readline();
+$n; // store how many fibonacci positions must be printed
 
+// print fibonacci sequence using recursion
 function fib($left, $a = 0, $b = 1) {
   global $n;
 
@@ -14,6 +14,10 @@ function fib($left, $a = 0, $b = 1) {
   fib($left - 1, $b, $a + $b);
 }
 
-fib($n);
+function f9() {
+  global $n;
+  echo "\$n (positive integer): "; $n = readline(); echo "\n";
 
+  fib($n);
+}
 ?>

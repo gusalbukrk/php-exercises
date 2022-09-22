@@ -1,14 +1,14 @@
 <?php
 require "1.php";
 require "2.php";
-// require "3.php";
-// require "4.php";
-// require "5.php";
-// require "6.php";
-// require "7.php";
-// require "8.php";
-// require "9.php";
-// require "10.php";
+require "3.php";
+require "4.php";
+require "5.php";
+require "6.php";
+require "7.php";
+require "8.php";
+require "9.php";
+require "10.php";
 
 function clear() {
   system('cls');
@@ -16,18 +16,15 @@ function clear() {
 }
 
 function menu() {
-  // clear();
-  // echo "\n\n\n";
-
   $option;
 
   $names = [
-    "calculator",
+    "basic calculator",
     "convert from month number to month name",
     "perfect numbers",
     "get day of the week from international date",
     "ideal weight",
-    "a thousand dice rolls",
+    "roll a dice a thousand times and display the quantity of times each side appeared",
     "prime numbers",
     "sum of 3 numbers",
     "fibonacci sequence",
@@ -41,10 +38,11 @@ function menu() {
     echo $i + 1 . " - " . ucfirst($names[$i]) . "\n";
   }
 
-  echo "\nOption (0 for exit): ";
+  // echo "\nOption (0 for exit): ";
+  echo "\nOption (to exit, leave it blank): ";
   $option = readline();
 
-  if ($option == 0) {
+  if ($option == '') {
     echo "\n"; return;
   }
 

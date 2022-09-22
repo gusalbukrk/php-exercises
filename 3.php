@@ -28,17 +28,28 @@
   }
 
   function printIfPerfectOrNot($n) {
-    echo $n . " " . (isPerfect($n) ? "is perfect." : "isn't perfect.") . "</br>";
+    echo $n . " " . (isPerfect($n) ? "IS PERFECT" : "ISN'T PERFECT") . ".\n";
   }
 
-  printIfPerfectOrNot(6);
-  printIfPerfectOrNot(24);
-
-  function perfectsUntil($n) {
+  function printPerfectsUntil($n) {
     for ($i = 2; $i <= $n; $i++) {
-      if (isPerfect($i)) echo $i . '</br>';
+      if (isPerfect($i)) echo $i . "\n";
     }
   }
 
-  perfectsUntil(10000);
+  function f3() {
+    echo "SUBMENU\n";
+    echo "3.1 - Check if \$n is perfect\n";
+    echo "3.2 - Print all perfect numbers until \$n\n";
+
+    echo "\nOption (3.1 or 3.2): "; $option = readline();
+
+    echo "\n\$n (positive integer): "; $n = readline();
+
+    if ($option == 3.1) {
+      printIfPerfectOrNot($n);
+    } else if ($option == 3.2) {
+      echo "\n"; printPerfectsUntil($n);
+    }
+  }
 ?>
