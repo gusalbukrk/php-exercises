@@ -55,7 +55,7 @@
   ?>
 
   <form method="get" action="index.php">
-    <input name="x" type="number" required />
+    <input name="x" type="number" required step="any" />
     <!-- <label for="operation">Operation</label> -->
     <select name="operation" id="operation">
       <option value="sum">+</option>
@@ -63,7 +63,7 @@
       <option value="mul">*</option>
       <option value="div">/</option>
     </select>
-    <input name="y" type="number" required />
+    <input name="y" type="number" required step="any" />
     <input type="submit" value="calculate" required />
   </form>
 </body>
