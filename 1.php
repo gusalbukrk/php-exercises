@@ -1,5 +1,5 @@
 <?php
-function one() {
+function f1() {
   echo "Operation (+, -, * or /): ";
   $operation = readline();
 

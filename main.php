@@ -1,6 +1,6 @@
 <?php
 require "1.php";
-// require "2.php";
+require "2.php";
 // require "3.php";
 // require "4.php";
 // require "5.php";
@@ -35,7 +35,6 @@ function menu() {
   ];
 
   echo "MENU\n";
-  // echo " 0 - exit\n";
   for ($i = 0; $i < count($names); $i++) {
     echo ($i < 9 ? " " : ""); // align single-digit numbers and double-digit number
 
@@ -45,24 +44,21 @@ function menu() {
   echo "\nOption (0 for exit): ";
   $option = readline();
 
-  // if ($option != 0) menu();
-
-  if ($option == 1) {
-    echo "\n"; one();
-
-    echo "\nPress `Enter` to continue"; readline(); echo "\n";
-    menu();
+  if ($option == 0) {
+    echo "\n"; return;
   }
 
-  // do {
-  //   echo "Option: ";
-  //   $option = readline();
-  // } while ($option != 0);
+  $continue;
+  do {
+    echo "\n"; call_user_func("f$option"); echo "\n"; // empty line before and after function echoes
 
-  // while ($option != 0) {
-  //   echo "Option: ";
-  //   $option = readline();
-  // }
+    echo "Continue? (y/N) "; $input = readline();
+    if (strtolower($input) == "n" || $input == "") $continue = false;
+    else if($input == "y") $continue = true;
+
+  } while ($continue);
+
+  echo "\n"; menu();
 }
 
 menu();
