@@ -1,4 +1,5 @@
 <?php
+function one() {
   echo "Operation (+, -, * or /): ";
   $operation = readline();
 
@@ -17,4 +18,5 @@
   ), 3);
 
   echo "\n$x $operation $y = $result\n";
+}
 ?>
