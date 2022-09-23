@@ -13,6 +13,6 @@ echo "Height (float): ";
 $height = readline();
 
 $ideal = number_format(idealWeight($gender, $height), 2);
-echo "The ideal weight of a " . ($gender == "M" ? "man" : "female") . " of height {$height}m is {$ideal}kg.\n";
+echo "\nThe ideal weight of a " . ($gender == "M" ? "man" : "female") . " of height {$height}m is {$ideal}kg.\n";
 }
 ?>

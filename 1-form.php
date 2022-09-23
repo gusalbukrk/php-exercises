@@ -36,7 +36,7 @@
 </head>
 <body>
   <?php
-    if ($_GET['x']) {
+    if (isset($_GET['x'])) {
       $x = $_GET['x']; $y = $_GET['y'];
       
       // basic operations lookup table
@@ -48,13 +48,13 @@
       ];
       $operation = $operations[$_GET['operation']];
 
-      $result = eval("return $x $operation $y;");
+      $result = round(eval("return $x $operation $y;"), 3);
 
       echo "<div id=\"output\">$x $operation $y = $result</div>";
     }
   ?>
 
-  <form method="get" action="index.php">
+  <form method="get" action="1-form.php">
     <input name="x" type="number" required step="any" />
     <!-- <label for="operation">Operation</label> -->
     <select name="operation" id="operation">
