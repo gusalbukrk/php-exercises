@@ -45,12 +45,13 @@
   function f10() {
     global $assign, $print, $find_largest, $largest;
 
-    $rows = $cols = 5;
+    $rows = 2;
+    $cols = 5;
 
     echo "SIZE\n";
-    $def = null; // should use the default 5x5 matrix
+    $def = null; // should use the default 2x5 matrix
     while (strtolower($def) != 'y' && $def !== '' && $def != 'n') { // run until valid input
-      printf("Use default (5x5 matrix)? (Y/n) ");
+      printf("Use default (2x5 matrix)? (Y/n) ");
       $def = readline();
     }
 
@@ -70,5 +71,7 @@
     iter($matrix, $print); echo "\n";
 
     echo "Largest: matrix[" . $largest['row'] . "][" . $largest['col'] . "] =  " . $largest['v'] . "\n";
+
+    $largest['row'] = 0; $largest['col'] = 0; $largest['v'] = null;
   }
 ?>
